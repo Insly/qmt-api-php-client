@@ -1,0 +1,29 @@
+{
+    "name": "insly/qmt-api-php-client",
+    "description": "A PHP client library for interacting with QMT API",
+    "type": "library",
+    "require": {
+        "php": "^7.2||^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Insly\\QmtApiClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Insly\\QmtApiClient\\Tests\\": "tests/",
+            "Insly\\QmtApiClient\\Tests\\Unit\\": "tests/unit"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/codecept run unit",
+        "coverage": "XDEBUG_MODE=coverage vendor/bin/codecept run --coverage unit"
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.0.0"
+    }
+}
